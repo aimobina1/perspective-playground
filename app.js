@@ -1,7 +1,7 @@
 let vm = Vue.createApp({
     data(){
         return{
-            perspective: 100,
+            perspective:100,
             rotateX: 0,
             rotateY: 0,
             rotateZ: 0
@@ -26,6 +26,22 @@ let vm = Vue.createApp({
             this.rotateX = 0
             this.rotateY = 0
             this.rotateZ = 0
+        },
+        copy(){
+          const el = document.createElement("textarea")
+
+          el.setAttribute('readonly' , "")
+          el.style.position= "absolute"
+          el.style.left= "-9999px"
+          el.value = `transform : ${this.box.transform}`
+
+          document.body.appendChild(el)
+          el.select()
+          document.execCommand('copy')
+          document.body.removeChild(el)
+          
+          let btn_text = document.getElementById('copy-text')
+          btn_text.textContent="copied!"
         }
         
     },

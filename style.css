@@ -74,6 +74,10 @@ html {
     border: none;
     margin-right: 10px;
   }
+  #copy-text{
+    color: #8d81f3;
+    margin-top: 20px;
+  }
   
   label{
     color: #fff;
@@ -87,7 +91,6 @@ html {
     section.settings {
       width:45%;
     }
-
     h2{
       font-size:35px;
       position: relative;
@@ -95,4 +98,12 @@ html {
       margin:0;
 
     }
+    label{
+      line-height: 1.8;
+    }
+
+    button {
+    margin-top: 20px;
+    }
+  
   }
